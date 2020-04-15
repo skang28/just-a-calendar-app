@@ -1,0 +1,7 @@
+.weekCalendarDays {
+    display: inline-block;
+    width: calc(.14 * 80vw); 
+    height: 40vw;
+    vertical-align: top;
+    border: 1px solid black;
+}

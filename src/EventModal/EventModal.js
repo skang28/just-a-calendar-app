@@ -1,0 +1,24 @@
+import React from 'react'
+import moment from 'moment'
+import EventContext from '../EventContext'
+import './EventModal.css'
+
+class EventModal extends React.Component {
+    static contextType = EventContext
+
+    render() {
+        let start_time_formatted = moment(this.props.currentEvent.start_date_time).format("dddd, MMMM Do YYYY, h:mm a")
+        let end_time_formatted = moment(this.props.currentEvent.end_date_time).format("dddd, MMMM Do YYYY, h:mm a")
+        return(
+            <div className="eventModal">
+                <p>Title: {this.props.currentEvent.title}</p>
+                <p>Location: {this.props.currentEvent.location}</p>
+                <p>Start: {start_time_formatted}</p>
+                <p>End: {end_time_formatted}</p>
+                <p>Description: {this.props.currentEvent.description}</p>
+            </div>
+        )
+    }
+}
+
+export default EventModal

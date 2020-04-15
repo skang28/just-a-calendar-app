@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
+.monthDays {
+    display: block;
+}
+
+.calendarDay, .emptyDay, .day {
+    display: inline-block;
+    width: calc(.14 * 80vw); 
+    vertical-align: top;
+}
+
+.calendarDay, .emptyDay {
+    border: 1px solid black;
+    width: calc(.14 * 80vw);
+    height: calc(.14 * 80vw);
+}

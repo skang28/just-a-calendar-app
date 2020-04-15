@@ -1,0 +1,9 @@
+.eventModal {
+    position: fixed;
+    top: 25vh;
+    left: 25vw;
+    width: 50vw;
+    height: 50vh;
+    background-color: white;
+    box-shadow: 3px 3px 8px 5px black;
+}
