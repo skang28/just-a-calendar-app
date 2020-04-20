@@ -27,7 +27,7 @@ class CalendarHome extends React.Component{
                         {views[this.props.viewType]}
                     </div>
                     <div>
-                        {this.props.currentEvent && <EventModal currentEvent = {this.props.currentEvent}/>}
+                        {this.props.currentEvent && <EventModal currentEvent = {this.props.currentEvent} history = {this.props.history}/>}
                     </div>
                 </div>
             </div>

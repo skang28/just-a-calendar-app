@@ -3,6 +3,15 @@ import './EventForm.css'
 import moment from 'moment'
 
 class EventForm extends React.Component {
+
+    static defaultProps = {
+        title: '',
+        location: '',
+        start_date_time: '2020-04-15T21:27:36.311Z',
+        end_date_time: '2020-04-16T21:27:36.311Z',
+        description: '',
+      }
+
     render() {
 
         let numDays = moment().daysInMonth()
@@ -26,8 +35,8 @@ class EventForm extends React.Component {
                         event.preventDefault()
                         let startDate = new Date(new Date().getFullYear(),event.target.startMonth.value,event.target.startDay.value,parseInt(event.target.startTime.value.split(':')[0]), parseInt(event.target.startTime.value.split(':')[1])).toISOString()
                         let endDate = new Date(new Date().getFullYear(),event.target.endMonth.value,event.target.endDay.value,parseInt(event.target.endTime.value.split(':')[0]),parseInt(event.target.endTime.value.split(':')[1])).toISOString()
-                        this.props.addEvent({
-                            id:5,
+                        this.props.submitEvent({
+                            id:this.props.id,
                             title: event.target.eventTitle.value,
                             location: event.target.eventLocation.value,
                             description: event.target.eventDescrip.value,
@@ -39,11 +48,11 @@ class EventForm extends React.Component {
                 
                     <div>
                         <label>Title</label>
-                        <input type="text" name="eventTitle"></input>
+                        <input type="text" name="eventTitle" defaultValue = {this.props.title}></input>
                     </div>
                     <div>
                         <label>Location</label>
-                        <input type="text" name="eventLocation"></input>
+                        <input type="text" name="eventLocation" defaultValue = {this.props.location}></input>
                     </div>
                     <div>
                         <label>Start</label>
@@ -117,7 +126,7 @@ class EventForm extends React.Component {
                     </div>
                     <div>
                         <label>Description</label>
-                        <textarea name="eventDescrip"></textarea>
+                        <textarea name="eventDescrip" defaultValue = {this.props.description}></textarea>
                     </div>
                     <button type="submit">Create Event</button>
                 </form>

@@ -22,7 +22,7 @@ class MonthlyView extends React.Component {
 
         for (let d = 0; d < daysInMonth; d++) {
             allDays.push(
-                <Cells className = "calendarDay" content = {d+1} contentISOString = {moment().startOf("month").add(d + 1,"days").toISOString()} />
+                <Cells className = "calendarDay" content = {d+1} contentISOString = {moment().startOf("month").add(d,"days").toISOString()} />
             )
         }
 
