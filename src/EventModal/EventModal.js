@@ -1,11 +1,12 @@
 import React from 'react'
 import moment from 'moment'
-import EventContext from '../EventContext'
 import './EventModal.css'
 
 class EventModal extends React.Component {
-    static contextType = EventContext
-
+    static defaultProps = {
+        currentEvent : {},
+        history : {push: function(){}}
+    }
     render() {
         let start_time_formatted = moment(this.props.currentEvent.start_date_time).format("dddd, MMMM Do YYYY, h:mm a")
         let end_time_formatted = moment(this.props.currentEvent.end_date_time).format("dddd, MMMM Do YYYY, h:mm a")

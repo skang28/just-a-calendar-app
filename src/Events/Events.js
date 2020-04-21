@@ -4,6 +4,9 @@ import EventContext from '../EventContext'
 
 class Events extends React.Component {
     static contextType = EventContext
+    static defaultProps = {
+        events:{}
+    }
 
     render() {
         return(

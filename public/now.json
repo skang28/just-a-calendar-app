@@ -1,0 +1,9 @@
+{
+    "version": 2,
+    "alias": "skang28-just-a-calendar-app",
+    "name": "just-a-calendar-app",
+    "routes": [
+        { "handle": "filesystem" },
+        { "src": "/.*", "dest": "/index.html" }
+    ]
+  }

@@ -3,8 +3,11 @@ import Events from '../Events/Events'
 import './EventsList.css'
 
 class EventsList extends React.Component {
-    
+    static defaultProps = {
+        events: []
+    }
     render() {
+
         let events = this.props.events
         return(
             <div className="eventsWrapper">
