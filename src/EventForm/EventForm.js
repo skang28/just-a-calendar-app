@@ -6,7 +6,7 @@ class EventForm extends React.Component {
 
     static defaultProps = {
         title: '',
-        location: '',
+        event_location: '',
         start_date_time: '2020-04-15T21:27:36.311Z',
         end_date_time: '2020-04-16T21:27:36.311Z',
         description: '',
@@ -34,6 +34,7 @@ class EventForm extends React.Component {
                 <form className="eventform" onSubmit = {(event) => {
                         event.preventDefault()
                         let startDate = new Date(new Date().getFullYear(),event.target.startMonth.value,event.target.startDay.value,parseInt(event.target.startTime.value.split(':')[0]), parseInt(event.target.startTime.value.split(':')[1])).toISOString()
+                        console.log(event.target.startMonth.value, event.target.startDay.value,event.target.startTime.value.split(':')[0],event.target.startTime.value.split(':')[1])
                         let endDate = new Date(new Date().getFullYear(),event.target.endMonth.value,event.target.endDay.value,parseInt(event.target.endTime.value.split(':')[0]),parseInt(event.target.endTime.value.split(':')[1])).toISOString()
                         this.props.submitEvent({
                             id:this.props.id,
@@ -52,7 +53,7 @@ class EventForm extends React.Component {
                     </div>
                     <div>
                         <label>Location</label>
-                        <input type="text" name="eventLocation" defaultValue = {this.props.location}></input>
+                        <input type="text" name="eventLocation" defaultValue = {this.props.event_location}></input>
                     </div>
                     <div>
                         <label>Start</label>

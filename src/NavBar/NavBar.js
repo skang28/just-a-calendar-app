@@ -1,12 +1,13 @@
 import React from 'react'
 import './NavBar.css'
+import {Link} from 'react-router-dom'
 
 class NavBar extends React.Component {
     render() {
         return(
             <section className="navbar">
                 <div className="viewSelect">
-                    <select onChange = {(e) => {
+                    <select className="selectBox" onChange = {(e) => {
                         this.props.setViewType(e.target.value)
                     }}>
                         <option value="weekly">Weekly</option>
@@ -17,8 +18,9 @@ class NavBar extends React.Component {
                 <div className="title">
                     Just a Calendar
                 </div>
-                <div className="settings">
-                    <button className="settingsButton">Settings</button>
+                <div className="navLinks">
+                    <Link to = {'/login'} style={{textDecoration: 'none'}} className="loginLink">Login</Link>
+                    <Link to = {'/registration'} style={{textDecoration: 'none'}} className="regLink">Register</Link>
                 </div>
             </section>
         )

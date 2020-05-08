@@ -12,13 +12,12 @@ class CalendarHome extends React.Component{
     static contextType = EventContext
     render() {
         let views={monthly: <MonthlyView />, daily: <DailyView />, weekly: <WeeklyView /> }
-        console.log(this.context.events)
 
         return(
             <div className="homePage" onClick = {() => {
                 this.context.setCurrentEvent(null)
             }}>
-                <NavBar setViewType = {this.props.setViewType}/>
+                <NavBar setViewType = {this.props.setViewType} history = {this.props.history}/>
                 <div className="calendarWrapper">
                     <div className="eventsList">
                         <EventsList history = {this.props.history} events = {this.props.events}/>
@@ -27,7 +26,7 @@ class CalendarHome extends React.Component{
                         {views[this.props.viewType]}
                     </div>
                     <div>
-                        {this.props.currentEvent && <EventModal currentEvent = {this.props.currentEvent} history = {this.props.history}/>}
+                        {this.props.currentEvent && <EventModal currentEvent = {this.props.currentEvent} history = {this.props.history} deleteEvent = {this.props.deleteEvent}/>}
                     </div>
                 </div>
             </div>

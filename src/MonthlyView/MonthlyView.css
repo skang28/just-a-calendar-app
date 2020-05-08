@@ -13,7 +13,9 @@
 }
 
 .calendarDay, .emptyDay {
-    border: 1px solid black;
+    border: 1px solid #2B4162;
     width: calc(.14 * 80vw);
     height: calc(.14 * 80vw);
+    color: #2B4162;
+    font-weight: 500;
 }

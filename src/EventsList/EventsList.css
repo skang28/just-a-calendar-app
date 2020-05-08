@@ -1,0 +1,29 @@
+.addEventButton {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 1.5em 0 1.5em 0;
+    border: solid 1px transparent;
+    border-radius: 6px;
+    padding: 0.5em 1.5em;
+    color: white;
+    background-color: #A770B3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.addEventButton:active {
+    transform: translateY(1px);
+    filter: saturate(150%);
+}
+
+.addEventButton:hover {
+    color: #A770B3;
+    border-color: #A770B3;
+    background-color: white;
+}
+
+.addEventButton:focus {
+    border:solid 3px #E1FFBA;
+    outline: none;
+}       

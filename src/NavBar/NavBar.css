@@ -1,9 +1,60 @@
 .navbar {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+.selectBox {
+    margin: 1em 0 0 2em;
+    background-color: #A770B3;
+    color: white;
+    padding: 0.8em;
+    width: 9em;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    -webkit-appearance: button;
+    appearance: button;
+    outline: none;
+    border-radius: 6px;
+}
+
+.viewSelect::after {
+    content: '\25BC';
+    padding: 0 1em;
+    position: absolute;
+    top: 22px;
+    left: 100px;
+    background: #A670B3;
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+    pointer-events: none;
 }
 
 .title {
     font-size: 2em;
+    font-weight: 500;
+    margin: 0.2em 0 0 2em;
+    color: #A770B3;
+}
+
+.navLinks {
+    cursor: pointer;
+    margin: 1em 2em 0 0;
+    font-weight: 500;
+    color: #2B4162;
+}
+
+.loginLink, .regLink {
+    margin-right: 1em;
+}
+
+.navLinks:visited {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #A770B3;
 }
