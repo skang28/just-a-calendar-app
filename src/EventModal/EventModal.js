@@ -17,10 +17,10 @@ class EventModal extends React.Component {
                 <p>Start: {start_time_formatted}</p>
                 <p>End: {end_time_formatted}</p>
                 <p>Description: {this.props.currentEvent.description}</p>
-                <button className="editButton" onClick = {() => {
+                <button className="modalButton" onClick = {() => {
                     this.props.history.push(`/event/${this.props.currentEvent.id}`)
                 }}>Edit Event</button>
-                <button className="deleteButton" onClick = {() => {
+                <button className="modalButton" onClick = {() => {
                     this.props.deleteEvent({
                         id: this.props.currentEvent.id,
                     })

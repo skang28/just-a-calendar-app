@@ -1,5 +1,6 @@
 .singleDay {
-    border: 1px black solid;
+    border: 1px solid #7C7C7C;
     width: 95%;
     height: 40vw;
+    font-size: 1.5em;
 }

@@ -3,5 +3,6 @@
     width: calc(.14 * 80vw); 
     height: 40vw;
     vertical-align: top;
-    border: 1px solid black;
+    border: 1px solid #7C7C7C;
+    font-size: 1.5em;
 }

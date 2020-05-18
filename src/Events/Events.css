@@ -10,9 +10,18 @@
 
 .eventTitle {
     font-size: 1.3em;
+    font-weight: 500;
+    font-family: 'Nunito Sans', sans-serif;
     margin-bottom: 0.3em;
-    border: 1px solid black;
-    border-radius: 0.8em;
+    border: none;
+    border-radius: 0.4em;
+    background-color: #5498FF;
+    color: #E9F1F7;
+}
+
+.eventTitle:active {
+    transform: translateY(1px);
+    filter: saturate(150%);
 }
 
 .eventTitle:hover {

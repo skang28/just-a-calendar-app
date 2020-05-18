@@ -6,4 +6,25 @@
     height: 50vh;
     background-color: white;
     box-shadow: 3px 3px 8px 5px black;
+    font-size: 1.1em;
+    font-weight: 400;
+    font-family: 'Nunito', sans-serif;
+    padding-left: 1em;
 }
+
+.modalButton {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    margin: 0.5em 0.5em 0 0;
+    border: solid 1px black;
+    border-radius: 6px;
+    padding: 0.2em 0.8em 0.2em 0.8em;
+}
+
+.modalButton:hover {
+    color: white;
+    border: solid 1px white;
+    background-color: black;
+}
+

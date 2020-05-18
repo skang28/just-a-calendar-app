@@ -31,6 +31,11 @@ class AuthApp extends React.Component {
       return res.json();
     })
     .then(events => {
+      events = events.map((event) => {
+        event.start_date_time+='Z'
+        event.end_date_time+='Z'
+        return event
+      })
       this.setState({events:events})
     })
     .catch(error => {
@@ -63,6 +68,8 @@ class AuthApp extends React.Component {
       return res.json()
     })
     .then(event => {
+      event.start_date_time+='Z'
+      event.end_date_time+='Z'
       this.setState({
         events: [...this.state.events, event]
       })

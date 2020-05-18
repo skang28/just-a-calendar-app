@@ -26,6 +26,26 @@ class EventForm extends React.Component {
             return <option value={index}>{month}</option>
         })
 
+        let times = []
+        for (let i=0; i<23.75; i+=0.5) {
+            let hours = Math.floor(i)
+            let minutes = (i - hours) * 60 + ''
+            let amPm = 'am'
+            if (minutes.length<2) {
+                minutes = '0' + minutes
+            }
+            if (hours > 11) {
+                hours = hours - 12
+                amPm = 'pm'
+            }
+            if (hours === 0) {
+                hours = 12
+            }
+            times.push(
+                <option value = {`${Math.floor(i)}:${minutes}`}>{hours}:{minutes} {amPm}</option>
+            )
+        }
+
         return(
             <div className="addEditEvent">
                 <header className="formHeader">
@@ -34,7 +54,8 @@ class EventForm extends React.Component {
                 <form className="eventform" onSubmit = {(event) => {
                         event.preventDefault()
                         let startDate = new Date(new Date().getFullYear(),event.target.startMonth.value,event.target.startDay.value,parseInt(event.target.startTime.value.split(':')[0]), parseInt(event.target.startTime.value.split(':')[1])).toISOString()
-                        console.log(event.target.startMonth.value, event.target.startDay.value,event.target.startTime.value.split(':')[0],event.target.startTime.value.split(':')[1])
+                        console.log('input: ', 'hours: '+event.target.startTime.value.split(':')[0],'minutes: '+event.target.startTime.value.split(':')[1])
+                        console.log('output: ',startDate)
                         let endDate = new Date(new Date().getFullYear(),event.target.endMonth.value,event.target.endDay.value,parseInt(event.target.endTime.value.split(':')[0]),parseInt(event.target.endTime.value.split(':')[1])).toISOString()
                         this.props.submitEvent({
                             id:this.props.id,
@@ -45,7 +66,7 @@ class EventForm extends React.Component {
                             end_date_time: endDate
                         })
                         this.props.history.push('/')
-                    }}>
+                }}>
                 
                     <div>
                         <label>Title</label>
@@ -64,30 +85,7 @@ class EventForm extends React.Component {
                             {dayOption}
                         </select>
                         <select name="startTime">
-                            <option value="12:00">12:00</option>
-                            <option value="12:30">12:30</option>
-                            <option value="1:00">1:00</option>
-                            <option value="1:30">1:30</option>
-                            <option value="2:00">2:00</option>
-                            <option value="2:30">2:30</option>
-                            <option value="3:00">3:00</option>
-                            <option value="3:30">3:30</option>
-                            <option value="4:00">4:00</option>
-                            <option value="4:30">4:30</option>
-                            <option value="5:00">5:00</option>
-                            <option value="5:30">5:30</option>
-                            <option value="6:00">6:00</option>
-                            <option value="6:30">6:30</option>
-                            <option value="7:00">7:00</option>
-                            <option value="7:30">7:30</option>
-                            <option value="8:00">8:00</option>
-                            <option value="8:30">8:30</option>
-                            <option value="9:00">9:00</option>
-                            <option value="9:30">9:30</option>
-                            <option value="10:00">10:00</option>
-                            <option value="10:30">10:30</option>
-                            <option value="11:00">11:00</option>
-                            <option value="11:30">11:30</option>
+                            {times}
                         </select>
                     </div>
                     <div>
@@ -99,30 +97,7 @@ class EventForm extends React.Component {
                             {dayOption}
                         </select>
                         <select name="endTime">
-                            <option value="12:00">12:00</option>
-                            <option value="12:30">12:30</option>
-                            <option value="1:00">1:00</option>
-                            <option value="1:30">1:30</option>
-                            <option value="2:00">2:00</option>
-                            <option value="2:30">2:30</option>
-                            <option value="3:00">3:00</option>
-                            <option value="3:30">3:30</option>
-                            <option value="4:00">4:00</option>
-                            <option value="4:30">4:30</option>
-                            <option value="5:00">5:00</option>
-                            <option value="5:30">5:30</option>
-                            <option value="6:00">6:00</option>
-                            <option value="6:30">6:30</option>
-                            <option value="7:00">7:00</option>
-                            <option value="7:30">7:30</option>
-                            <option value="8:00">8:00</option>
-                            <option value="8:30">8:30</option>
-                            <option value="9:00">9:00</option>
-                            <option value="9:30">9:30</option>
-                            <option value="10:00">10:00</option>
-                            <option value="10:30">10:30</option>
-                            <option value="11:00">11:00</option>
-                            <option value="11:30">11:30</option>
+                            {times}
                         </select>
                     </div>
                     <div>

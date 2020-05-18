@@ -11,8 +11,10 @@ class Cells extends React.Component {
         date.setDate(date.getDate()+1)
 
         let events = this.context.events.filter((event) => {
-            return event.start_date_time>this.props.contentISOString && event.start_date_time<date.toISOString()
+            console.log('day iso string',this.props.contentISOString, "event",event.start_date_time, "date",date, "content", this.props.content)
+            return new Date(event.start_date_time).toISOString()>this.props.contentISOString && new Date(event.start_date_time).toISOString()<date.toISOString()
         })
+
 
         return(
             <div className={this.props.className}>

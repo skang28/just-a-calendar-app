@@ -1,14 +1,19 @@
+.eventsWrapper {
+    padding: 0 1.5em 0 1.5em;
+}
+
 .addEventButton {
     display: inline-block;
     text-align: center;
     text-decoration: none;
     font-weight: 500;
+    font-family: 'Nunito', sans-serif;
     margin: 1.5em 0 1.5em 0;
-    border: solid 1px transparent;
+    border: solid 1px black;
     border-radius: 6px;
     padding: 0.5em 1.5em;
-    color: white;
-    background-color: #A770B3;
+    color: black;
+    background-color: white;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -18,12 +23,18 @@
 }
 
 .addEventButton:hover {
-    color: #A770B3;
-    border-color: #A770B3;
-    background-color: white;
+    color: white;
+    border-color: white;
+    background-color: black;
 }
 
 .addEventButton:focus {
     border:solid 3px #E1FFBA;
     outline: none;
 }       
+
+.listTitle {
+    font-size: 1.5em;
+    font-weight: 500;
+    font-family: 'Nunito', sans-serif;
+}

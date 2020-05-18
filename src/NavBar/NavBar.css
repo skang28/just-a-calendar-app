@@ -2,15 +2,17 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    font-family: 'Nunito', sans-serif;
 }
 
 .selectBox {
     margin: 1em 0 0 2em;
-    background-color: #A770B3;
-    color: white;
+    background-color: white;
+    color: black;
     padding: 0.8em;
     width: 9em;
     font-weight: 500;
+    font-family: 'Nunito', sans-serif;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     -webkit-appearance: button;
     appearance: button;
@@ -22,9 +24,9 @@
     content: '\25BC';
     padding: 0 1em;
     position: absolute;
-    top: 22px;
-    left: 100px;
-    background: #A670B3;
+    top: 24px;
+    left: 97px;
+    background: white;
     cursor: pointer;
     pointer-events: none;
     -webkit-transition: .25s all ease;
@@ -37,24 +39,27 @@
     font-size: 2em;
     font-weight: 500;
     margin: 0.2em 0 0 2em;
-    color: #A770B3;
+    color: black;
 }
 
 .navLinks {
     cursor: pointer;
     margin: 1em 2em 0 0;
     font-weight: 500;
-    color: #2B4162;
-}
-
-.loginLink, .regLink {
-    margin-right: 1em;
 }
 
 .navLinks:visited {
     text-decoration: none;
 }
 
-a:visited {
-    color: #A770B3;
+.navLinks:hover {
+    transform: translateY(1px);
+}
+
+a {
+    color: black;
+}
+
+.loginLink, .regLink {
+    margin-right: 1em;
 }
