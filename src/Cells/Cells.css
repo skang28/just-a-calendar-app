@@ -1,11 +1,13 @@
 .cellEvent {
-    background-color: #031D44;
+    background-color: #2B4D80;
     color: #E9F1F7;
     font-family: 'Nunito Sans', sans-serif;
+    font-weight: 300;
     border: solid 1px transparent;
     border-radius: 5px;
     margin: 5px 0 5px 0;
     padding-left: 0.5em;
+    opacity: 90%;
 }
 
 .cellEvent:hover {

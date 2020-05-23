@@ -32,7 +32,7 @@ class LoginPage extends React.Component {
                     })
                     .then(authRes => {
                         localStorage.setItem('token', authRes.authToken)
-                        this.props.history.push('/')
+                        this.props.history.push('/home')
                     })
                     .catch(error => {
                         this.setState({
@@ -44,7 +44,7 @@ class LoginPage extends React.Component {
                     <label>Account Name</label>
                     <input type="text" name="accountName"></input>
                     <label>Password</label>
-                    <input type="text" name="accountPassword"></input>
+                    <input type="password" name="accountPassword"></input>
                     <button type="submit">Login</button>
                 {this.state.error?<p>{this.state.error}</p>:''}
                 </form>

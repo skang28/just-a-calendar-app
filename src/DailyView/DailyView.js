@@ -10,7 +10,7 @@ class DailyView extends React.Component {
         
         return(
             <div>
-                <span>{currentDayFormatted}</span>
+                <span className="day">{currentDayFormatted}</span>
                 <div><Cells className="singleDay" content={currentDay} contentISOString = {moment().startOf('day').toISOString()}/></div>
             </div>
         )

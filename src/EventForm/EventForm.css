@@ -2,6 +2,54 @@ input, select {
     margin-bottom: 2em;
 }
 
-label {
-    margin-right: 0.5em;
+.formHeader h2{
+    margin: 0;
+}
+
+.addEditEvent {
+    min-height: 100vh;
+    margin: 0 0 0 1em;
+}
+
+.formButton {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    margin: 2em 0.5em 0 0;
+    border: solid 1px transparent;
+    border-radius: 6px;
+    padding: 0.4em 0.9em 0.4em 0.9em;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: #2B4D80;
+    color: white;
+    font-size: 0.9em;
+}
+
+.titleLabel {
+    margin-right: 3.5em;
+}
+
+.locLabel {
+    margin-right: 1.7em;
+}
+
+.startLabel {
+    margin-right: 3.4em;
+}
+
+.endLabel {
+    margin-right: 3.8em;
+}
+
+.descripLabel{
+    height: 100% !important;
+    float: left;
+    padding-top: 2em;
+}
+
+textarea {
+    margin-top: 1em;
+    resize: none;
+    width: 15%;
+    height: 10em;
 }

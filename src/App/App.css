@@ -6,3 +6,20 @@ button {
   background-color: transparent;
   cursor: pointer;
 }
+
+.wholeApp {
+  background-color: #AAAAAA;
+}
+
+img {
+  position: fixed;
+  z-index: 0;
+  width: auto;
+  height: 100;
+  opacity: 20%;
+}
+
+.appContent {
+  position: relative;
+  z-index: 1;
+}

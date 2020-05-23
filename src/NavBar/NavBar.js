@@ -19,8 +19,12 @@ class NavBar extends React.Component {
                     Just a Calendar
                 </div>
                 <div className="navLinks">
-                    <Link to = {'/login'} style={{textDecoration: 'none'}} className="loginLink">Login</Link>
-                    <Link to = {'/registration'} style={{textDecoration: 'none'}} className="regLink">Register</Link>
+                    {localStorage.getItem('token') ? <Link onClick={() => {
+                        localStorage.removeItem('token')
+                        this.props.history.push('/login')
+                    }}>Logout</Link> : <div><Link to={'/login'} style={{ textDecoration: 'none' }} className="loginLink">Login</Link>
+                            <Link to={'/registration'} style={{ textDecoration: 'none' }} className="regLink">Register</Link>
+                        </div>}
                 </div>
             </section>
         )

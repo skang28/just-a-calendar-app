@@ -1,68 +1,43 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Just a Calendar
 
-## Available Scripts
+[Live app](https://just-a-calendar-app.skang28.now.sh/)
 
-In the project directory, you can run:
+## Summary
+Just a Calendar is an app that brings a fresh take on the classic calendar app. This app aims to bring all the essential functionality that all calendar apps offer without all the extra fluff. The user can create, edit, and delete events on the calendar. The user can view the calendar in 3 different views, daily, weekly, and monthly. Simplicity is the theme.
 
-### `npm start`
+1. Home page is the default view of the app, and shows the calendar in its monthly view. This view also shows upcoming events for the user on the left. This list can be seen on all three views, monthly, weekly, and daily.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+2. The weekly view page shows only the current week and any events in that week.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+3. The daily view page shows only the current day of the week and any events occuring on that day.
 
-### `npm test`
+4. The user can create or edit an event through the event form page.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## API Documentation
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Authentication
+#### POST /auth
+Creates an authentication request for user login, and creates an authentication token for successful logins.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Events
+#### GET /events
+Retrieves all events stored in database specific to user currently logged in.
 
-### `npm run eject`
+#### POST /events
+Creates a new event specific to user currently logged in.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### PATCH /events
+Updates an event chosen by user.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### DELETE /events
+Deletes a selected event.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Users
+#### POST /users
+Creates a new user account with validation on username and password.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Technology Used
+HTML, CSS, Javascript, React

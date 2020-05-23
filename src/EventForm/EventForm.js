@@ -12,6 +12,8 @@ class EventForm extends React.Component {
         description: '',
       }
 
+    state = {}
+
     render() {
 
         let numDays = moment().daysInMonth()
@@ -54,10 +56,8 @@ class EventForm extends React.Component {
                 <form className="eventform" onSubmit = {(event) => {
                         event.preventDefault()
                         let startDate = new Date(new Date().getFullYear(),event.target.startMonth.value,event.target.startDay.value,parseInt(event.target.startTime.value.split(':')[0]), parseInt(event.target.startTime.value.split(':')[1])).toISOString()
-                        console.log('input: ', 'hours: '+event.target.startTime.value.split(':')[0],'minutes: '+event.target.startTime.value.split(':')[1])
-                        console.log('output: ',startDate)
                         let endDate = new Date(new Date().getFullYear(),event.target.endMonth.value,event.target.endDay.value,parseInt(event.target.endTime.value.split(':')[0]),parseInt(event.target.endTime.value.split(':')[1])).toISOString()
-                        this.props.submitEvent({
+                        let res = this.props.submitEvent({
                             id:this.props.id,
                             title: event.target.eventTitle.value,
                             location: event.target.eventLocation.value,
@@ -65,19 +65,29 @@ class EventForm extends React.Component {
                             start_date_time: startDate,
                             end_date_time: endDate
                         })
-                        this.props.history.push('/')
+                        if (res) {
+                            res.catch((err) => {
+                                err.json().then((err) => {
+                                    this.setState({error:err.error.message})
+                                })
+                            })
+                        }
+                        else {
+                            this.props.history.push('/home')
+
+                        }
                 }}>
-                
+                    {this.state.error?this.state.error:''}
                     <div>
-                        <label>Title</label>
-                        <input type="text" name="eventTitle" defaultValue = {this.props.title}></input>
+                        <label className="titleLabel">Title</label>
+                        <input type="text" name="eventTitle" defaultValue = {this.props.title} required></input>
                     </div>
                     <div>
-                        <label>Location</label>
+                        <label className="locLabel">Location</label>
                         <input type="text" name="eventLocation" defaultValue = {this.props.event_location}></input>
                     </div>
                     <div>
-                        <label>Start</label>
+                        <label className="startLabel">Start</label>
                         <select name="startMonth">
                             {monthOption}
                         </select>
@@ -89,7 +99,7 @@ class EventForm extends React.Component {
                         </select>
                     </div>
                     <div>
-                        <label>End</label>
+                        <label className="endLabel">End</label>
                         <select name="endMonth">
                             {monthOption}
                         </select>
@@ -101,10 +111,10 @@ class EventForm extends React.Component {
                         </select>
                     </div>
                     <div>
-                        <label>Description</label>
-                        <textarea name="eventDescrip" defaultValue = {this.props.description}></textarea>
+                        <label className="descripLabel">Description</label>
+                        <textarea name="eventDescrip" defaultValue = {this.props.description} required></textarea>
                     </div>
-                    <button type="submit">Create Event</button>
+                    <button type="submit" className="formButton">Create Event</button>
                 </form>
             </div>
         )

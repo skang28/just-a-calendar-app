@@ -7,8 +7,9 @@
 
 .selectBox {
     margin: 1em 0 0 2em;
-    background-color: white;
-    color: black;
+    background-color: #2B4D80;
+    border-color: transparent;
+    color: white;
     padding: 0.8em;
     width: 9em;
     font-weight: 500;
@@ -26,7 +27,7 @@
     position: absolute;
     top: 24px;
     left: 97px;
-    background: white;
+    background: #2B4D80;
     cursor: pointer;
     pointer-events: none;
     -webkit-transition: .25s all ease;
@@ -57,7 +58,7 @@
 }
 
 a {
-    color: black;
+    color: #FFAD0A;
 }
 
 .loginLink, .regLink {

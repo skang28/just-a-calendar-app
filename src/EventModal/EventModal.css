@@ -4,12 +4,13 @@
     left: 25vw;
     width: 50vw;
     height: 50vh;
-    background-color: white;
+    background-color: #E6E6E6;
     box-shadow: 3px 3px 8px 5px black;
     font-size: 1.1em;
     font-weight: 400;
     font-family: 'Nunito', sans-serif;
     padding-left: 1em;
+    opacity: 90%;
 }
 
 .modalButton {
@@ -17,14 +18,18 @@
     text-align: center;
     text-decoration: none;
     margin: 0.5em 0.5em 0 0;
-    border: solid 1px black;
+    border: solid 1px transparent;
     border-radius: 6px;
-    padding: 0.2em 0.8em 0.2em 0.8em;
+    padding: 0.4em 0.9em 0.4em 0.9em;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: #2B4D80;
+    color: white;
+    font-size: 0.9em;
 }
 
 .modalButton:hover {
-    color: white;
-    border: solid 1px white;
-    background-color: black;
+    color: #2B4D80;
+    border: solid 1px #2B4D80;
+    background-color: white;
 }
 

@@ -49,7 +49,7 @@ class AuthApp extends React.Component {
 
   addEvent = (event) => {
     let token = localStorage.getItem('token')
-    fetch(`${config.API_ENDPOINT}/api/events`, {
+    return fetch(`${config.API_ENDPOINT}/api/events`, {
       method: 'POST',
       body: JSON.stringify(event),
       headers:{
@@ -63,7 +63,7 @@ class AuthApp extends React.Component {
         return
       }
       if(!res.ok) {
-        throw 'error'
+        throw res
       }
       return res.json()
     })
@@ -74,14 +74,11 @@ class AuthApp extends React.Component {
         events: [...this.state.events, event]
       })
     })
-    .catch(error => {
-      console.log(error)
-    })
   }
 
   updateEvent = (event) => { 
     let token = localStorage.getItem('token')
-    fetch(`${config.API_ENDPOINT}/api/events/${event.id}`, {
+    return fetch(`${config.API_ENDPOINT}/api/events/${event.id}`, {
       method: 'PATCH',
       body: JSON.stringify(event),
       headers:{
@@ -94,7 +91,7 @@ class AuthApp extends React.Component {
         this.props.history.push('/login')
       }
       if(!res.ok) {
-        throw 'error'
+        throw res
       }
     })
     .then(eventRes => {
@@ -102,9 +99,6 @@ class AuthApp extends React.Component {
       let index=events.findIndex(function(ele){ return ele.id === event.id }) 
       events.splice(index,1)
       this.setState({events: [...events, event]}) 
-    })
-    .catch(error => {
-      console.log(error)
     })
   }
 
@@ -144,9 +138,9 @@ class AuthApp extends React.Component {
     return(
       <EventContext.Provider value = {{events: this.state.events, setCurrentEvent: this.setCurrentEvent}}>
           <main className="authApp">
-            <Route exact path = '/' render = {(props) => <CalendarHome {...props} events = {this.state.events} currentEvent = {this.state.currentEvent} viewType = {this.state.viewType} setViewType = {this.setViewType} deleteEvent = {this.deleteEvent}/>}/>
-            <Route exact path = '/event/' render = {(props) => <EventForm {...props} events = {this.state.events} submitEvent = {this.addEvent}/>} />
-            <Route path = '/event/:id' render = {(props) => {
+            <Route exact path = '/home' render = {(props) => <CalendarHome {...props} events = {this.state.events} currentEvent = {this.state.currentEvent} viewType = {this.state.viewType} setViewType = {this.setViewType} deleteEvent = {this.deleteEvent}/>}/>
+            <Route exact path = '/home/event/' render = {(props) => <EventForm {...props} events = {this.state.events} submitEvent = {this.addEvent}/>} />
+            <Route path = '/home/event/:id' render = {(props) => {
                 let event = this.state.events.find(function(ele){return props.match.params.id == ele.id}) || {}
                 event.event_location = event.location
                 return <EventForm {...props} events = {this.state.events} submitEvent = {this.updateEvent} {...event}/>

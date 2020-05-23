@@ -17,7 +17,7 @@ class EventsList extends React.Component {
                         events.map((events, index) => <Events events = {events} key={"event" + index}/>)
                         :'There are no events yet'}
                 </div>
-                <button className="addEventButton" onClick = {() => this.props.history.push('/event')}>New Event</button>
+                <button className="addEventButton" onClick = {() => this.props.history.push('/home/event')}>New Event</button>
             </div>
         )
     }

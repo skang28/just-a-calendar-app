@@ -7,15 +7,6 @@ import './WeeklyView.css'
 class WeeklyView extends React.Component {
         
     render() {
-
-        let firstDay = moment().startOf("week").date();
-        let lastDay = moment().endOf("month").date();
-        let currentDay = moment().date();
-        let dayOfWeek = moment().day();
-        let currentDayWeek = moment().weekday();
-
-        console.log([firstDay, lastDay, currentDay, dayOfWeek, currentDayWeek])
-
         let allDays = [];
 
         for (let i = 0 ; i < 7; i++) {

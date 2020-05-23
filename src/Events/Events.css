@@ -8,15 +8,29 @@
     font-weight: bold;
 }
 
-.eventTitle {
-    font-size: 1.3em;
-    font-weight: 500;
+.listItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 1em;
+    font-weight: 300;
     font-family: 'Nunito Sans', sans-serif;
+    text-align: left;
+    padding: 0 0.5em 0 0.5em;
     margin-bottom: 0.3em;
     border: none;
     border-radius: 0.4em;
-    background-color: #5498FF;
+    background-color: #2B4D80;
     color: #E9F1F7;
+    opacity: 90%;
+}
+
+.listItem:hover {
+    cursor: pointer;
+}
+
+.eventTitle {
+    margin: auto 0 auto 0;
 }
 
 .eventTitle:active {
@@ -24,7 +38,6 @@
     filter: saturate(150%);
 }
 
-.eventTitle:hover {
-    cursor: pointer;
+.eventTimes {
+    font-size: 0.9em;
 }
-

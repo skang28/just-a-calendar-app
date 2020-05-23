@@ -1,8 +1,12 @@
 .weekCalendarDays {
     display: inline-block;
     width: calc(.14 * 80vw); 
-    height: 40vw;
+    height: 43.65vw;
     vertical-align: top;
-    border: 1px solid #7C7C7C;
+    border: 1px solid black;
     font-size: 1.5em;
+    color: black;
+    font-weight: 500;
+    font-family: 'Nunito Sans', sans-serif;
+    overflow-y: auto;
 }

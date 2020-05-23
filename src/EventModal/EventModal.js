@@ -18,7 +18,7 @@ class EventModal extends React.Component {
                 <p>End: {end_time_formatted}</p>
                 <p>Description: {this.props.currentEvent.description}</p>
                 <button className="modalButton" onClick = {() => {
-                    this.props.history.push(`/event/${this.props.currentEvent.id}`)
+                    this.props.history.push(`/home/event/${this.props.currentEvent.id}`)
                 }}>Edit Event</button>
                 <button className="modalButton" onClick = {() => {
                     this.props.deleteEvent({
