@@ -1,0 +1,32 @@
+.homePage {
+    text-align: center;
+    height: 100vh;
+}
+
+.homePageHeader h1 {
+    margin: 0;
+    font-size: 3em;
+}
+
+.homePageHeader h2 {
+    font-size: 2em;
+}
+
+.homePageHeader {
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 3em;
+}
+
+.homePageMain {
+    font-family: 'Nunito Sans', sans-serif;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.4em;
+}
+
+.homeButton {
+    border: 1px solid black;
+    border-radius: 7px;
+    padding: 10px 15px 10px 15px;
+}

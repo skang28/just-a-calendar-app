@@ -74,7 +74,6 @@ class EventForm extends React.Component {
                         }
                         else {
                             this.props.history.push('/home')
-
                         }
                 }}>
                     {this.state.error?this.state.error:''}

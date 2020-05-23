@@ -1,10 +1,18 @@
 .singleDay {
-    border: 1px solid #7C7C7C;
-    width: 95%;
-    height: 40vw;
-    font-size: 1.5em;
+    border: 1px solid black;
+    width: 98%;
+    height: 87.7vh;
+    font-size: 1.3em;
 }
 
 .eventsFilter {
     font-size: 1em;
+}
+
+.dayNumber {
+    font-size: 2em;
+}
+
+.singleDayNumber {
+    font-size: 1.5em;
 }

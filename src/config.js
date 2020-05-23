@@ -1,3 +1,3 @@
 export default {
-    API_ENDPOINT: 'http://localhost:8000'
+    API_ENDPOINT: 'https://fierce-brushlands-92343.herokuapp.com/'
 }

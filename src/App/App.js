@@ -21,7 +21,7 @@ class App extends React.Component {
       "https://wallpaperplay.com/walls/full/c/f/a/43305.jpg",
       "https://wallpaperplay.com/walls/full/5/e/a/43312.jpg",
       "https://wallpaperplay.com/walls/full/5/9/a/43315.jpg"]
-    //monthImages[new Date().getMonth()]
+
     return(
       <div className="wholeApp">
         <img src = {monthImages[new Date().getMonth()]}></img>

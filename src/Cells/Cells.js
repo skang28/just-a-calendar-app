@@ -17,7 +17,7 @@ class Cells extends React.Component {
 
         return(
             <div className={this.props.className}>
-                <div>
+                <div className={this.props.className2}>
                     {this.props.content}
                 </div>
                 <div className="eventsFilter">

@@ -4,9 +4,13 @@
     height: 43.65vw;
     vertical-align: top;
     border: 1px solid black;
-    font-size: 1.5em;
+    font-size: 1.1em;
     color: black;
     font-weight: 500;
     font-family: 'Nunito Sans', sans-serif;
     overflow-y: auto;
+}
+
+.weekdayNumber {
+    font-size: 1.3em;
 }

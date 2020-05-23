@@ -12,7 +12,12 @@ class WeeklyView extends React.Component {
         for (let i = 0 ; i < 7; i++) {
             let momentObject = moment().startOf("week").add(i, "days")
             allDays.push(
-                <Cells className="weekCalendarDays" content = {momentObject.date()} contentISOString = {momentObject.toISOString()} />
+                <Cells 
+                    className="weekCalendarDays"
+                    className2="weekdayNumber"
+                    content = {momentObject.date()} 
+                    contentISOString = {momentObject.toISOString()} 
+                />
             )
         }
 

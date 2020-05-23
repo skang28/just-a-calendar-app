@@ -1,4 +1,5 @@
 import React from 'react'
+import './HomePage.css'
 
 class HomePage extends React.Component {
     render() {
@@ -15,7 +16,7 @@ class HomePage extends React.Component {
                 </p>
                 <p>The user registers or logs in to the app, and will see the calendar unique to the user account. The user creates, edits, or deletes events.</p>
               </div>
-              <button className="homeButton" onClick = {() => this.props.history.push('/home')}>Explore</button>
+              <button className="homeButton" onClick = {() => this.props.history.push('/home')}>Get Organized!</button>
             </main>
           </div>
         )
