@@ -11,6 +11,14 @@ button {
   background-color: #AAAAAA;
 }
 
+.backgroundImage {
+  position: fixed;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 20%;
+}
+
 img {
   position: fixed;
   z-index: 0;

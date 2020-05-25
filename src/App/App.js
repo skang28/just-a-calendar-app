@@ -24,7 +24,9 @@ class App extends React.Component {
 
     return(
       <div className="wholeApp">
-        <img src = {monthImages[new Date().getMonth()]}></img>
+        <div className="backgroundImage" style={{
+          backgroundImage: `url(${monthImages[new Date().getMonth()] })`
+        }}></div>
         <div className="appContent">
           <Switch>
             <Route exact path = '/' component = {HomePage} />

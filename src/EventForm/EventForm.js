@@ -10,9 +10,9 @@ class EventForm extends React.Component {
         start_date_time: '2020-04-15T21:27:36.311Z',
         end_date_time: '2020-04-16T21:27:36.311Z',
         description: '',
-      }
+      };
 
-    state = {}
+    state = {};
 
     render() {
 
@@ -53,10 +53,11 @@ class EventForm extends React.Component {
                 <header className="formHeader">
                     <h2>Add/Edit Event</h2>
                 </header>
-                <form className="eventform" onSubmit = {(event) => {
+                <form className="eventform" 
+                    onSubmit = { async (event) => {
                         event.preventDefault()
-                        let startDate = new Date(new Date().getFullYear(),event.target.startMonth.value,event.target.startDay.value,parseInt(event.target.startTime.value.split(':')[0]), parseInt(event.target.startTime.value.split(':')[1])).toISOString()
-                        let endDate = new Date(new Date().getFullYear(),event.target.endMonth.value,event.target.endDay.value,parseInt(event.target.endTime.value.split(':')[0]),parseInt(event.target.endTime.value.split(':')[1])).toISOString()
+                        let startDate = new Date(new Date().getFullYear(),event.target.startMonth.value,event.target.startDay.value,parseInt(event.target.startTime.value.split(':')[0]), parseInt(event.target.startTime.value.split(':')[1])).toISOString();
+                        let endDate = new Date(new Date().getFullYear(),event.target.endMonth.value,event.target.endDay.value,parseInt(event.target.endTime.value.split(':')[0]),parseInt(event.target.endTime.value.split(':')[1])).toISOString();
                         let res = this.props.submitEvent({
                             id:this.props.id,
                             title: event.target.eventTitle.value,
@@ -65,16 +66,15 @@ class EventForm extends React.Component {
                             start_date_time: startDate,
                             end_date_time: endDate
                         })
-                        if (res) {
-                            res.catch((err) => {
-                                err.json().then((err) => {
-                                    this.setState({error:err.error.message})
-                                })
+                        res
+                            .then(() => {
+                                this.props.history.push('/home');
                             })
-                        }
-                        else {
-                            this.props.history.push('/home')
-                        }
+                            .catch((err) => {
+                                err.json().then((err) => {
+                                    this.setState({ error: err.error.message });
+                                });
+                            });
                 }}>
                     {this.state.error?this.state.error:''}
                     <div>
