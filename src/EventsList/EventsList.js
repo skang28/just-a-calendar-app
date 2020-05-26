@@ -11,10 +11,19 @@ class EventsList extends React.Component {
         let events = this.props.events
         return(
             <div className="eventsWrapper">
-                <p className="listTitle">My Events</p>
+                <p className="listTitle">Upcoming Events</p>
                 <div className="upcomingEvents">
                     {events.length?
-                        events.map((events, index) => <Events events = {events} key={"event" + index}/>)
+                        events.filter((event) => {
+                            return event.end_date_time > new Date().toISOString()
+                        }).sort((a,b) => {
+                            if (a.start_date_time<b.start_date_time) {
+                                return -1
+                            }
+                            else {
+                                return 1
+                            }
+                        }).map((events, index) => <Events events = {events} key={"event" + index}/>)
                         :'There are no events yet'}
                 </div>
                 <button className="addEventButton" onClick = {() => this.props.history.push('/home/event')}>New Event</button>

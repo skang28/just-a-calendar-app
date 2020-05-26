@@ -1,0 +1,40 @@
+.registrationPage {
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.registrationForm {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.registrationNav {
+    margin-bottom: 1.5em;
+}
+
+.registrationButton {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: 500;
+    font-family: 'Nunito', sans-serif;
+    margin: 0 auto 0 auto;
+    border: solid 1px transparent;
+    border-radius: 6px;
+    padding: 0.5em 1.5em;
+    color: white;
+    background-color: #2B4D80;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.registrationButton:hover {
+    color: #2B4D80;
+    border-color: #2B4D80;
+    background-color: white;
+}

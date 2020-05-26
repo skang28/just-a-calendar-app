@@ -11,7 +11,7 @@ class Cells extends React.Component {
         date.setDate(date.getDate()+1)
 
         let events = this.context.events.filter((event) => {
-            return new Date(event.start_date_time).toISOString()>this.props.contentISOString && new Date(event.start_date_time).toISOString()<date.toISOString()
+            return new Date(event.start_date_time).toISOString()>=this.props.contentISOString && new Date(event.start_date_time).toISOString()<date.toISOString()
         })
 
 
@@ -21,11 +21,11 @@ class Cells extends React.Component {
                     {this.props.content}
                 </div>
                 <div className="eventsFilter">
-                    {events.map((event) => {
+                    {events.map((event,index) => {
                         return <div className="cellEvent" onClick = {(clickEvent) => {
                             clickEvent.stopPropagation()
                             this.context.setCurrentEvent(event)
-                        }}>{event.title}</div>
+                        }} key={this.props.contentISOString + "event" + index}>{event.title}</div>
                     })}
                 </div>
             </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import config from '../config'
 import {Link} from 'react-router-dom'
+import './LoginPage.css'
 
 class LoginPage extends React.Component {
     state = {
@@ -9,8 +10,9 @@ class LoginPage extends React.Component {
     render() {
         return(
             <div className="loginWrapper">
-                <nav>
-                    <Link to = {'/registration'}>Register Account</Link>
+                <nav className="loginNav">
+                    <Link to = {'/'} style={{textDecoration: 'none'}} className="loginPageLink">Home</Link>
+                    <Link to = {'/registration'} style={{textDecoration: 'none'}} className="loginPageLink" >Create Account</Link>
                 </nav>
                 <form className="loginForm" onSubmit = {(event) => {
                     event.preventDefault()
@@ -41,11 +43,17 @@ class LoginPage extends React.Component {
                     })
                     
                 }}>
-                    <label>Account Name</label>
-                    <input type="text" name="accountName"></input>
-                    <label>Password</label>
-                    <input type="password" name="accountPassword"></input>
-                    <button type="submit">Login</button>
+                    <div className="formWrapper">
+                        <div>
+                            <label className="nameLabel">Account Name</label>
+                            <input type="text" name="accountName"></input>
+                        </div>
+                        <div>
+                            <label className="passwordLabel">Password</label>
+                            <input type="password" name="accountPassword"></input>
+                        </div>
+                        <button type="submit" className="loginPageButton">Login</button>
+                    </div>
                 {this.state.error?<p>{this.state.error}</p>:''}
                 </form>
             </div>
