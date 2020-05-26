@@ -20,12 +20,12 @@ class EventForm extends React.Component {
 
         let dayOption = []
         for (let i=1 ; i<numDays+1; i++) {
-            dayOption.push(<option value={i}>{i}</option>)
+            dayOption.push(<option value={i} key={"option" +i}>{i}</option>)
         }
 
         let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
         let monthOption = months.map((month, index) => {
-            return <option value={index}>{month}</option>
+            return <option value={index} key={"option" +index}>{month}</option>
         })
 
         let times = []
@@ -44,7 +44,7 @@ class EventForm extends React.Component {
                 hours = 12
             }
             times.push(
-                <option value = {`${Math.floor(i)}:${minutes}`}>{hours}:{minutes} {amPm}</option>
+                <option value = {`${Math.floor(i)}:${minutes}`} key={"option"+i}>{hours}:{minutes} {amPm}</option>
             )
         }
 

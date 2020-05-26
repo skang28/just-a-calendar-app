@@ -16,7 +16,8 @@ class WeeklyView extends React.Component {
                     className="weekCalendarDays"
                     className2="weekdayNumber"
                     content = {momentObject.date()} 
-                    contentISOString = {momentObject.toISOString()} 
+                    contentISOString = {momentObject.toISOString()}
+                    key = {momentObject.toISOString()} 
                 />
             )
         }
