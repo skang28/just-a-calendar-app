@@ -9,7 +9,7 @@ class DailyView extends React.Component {
         let currentDayFormatted = moment().format("ddd");
         
         return(
-            <div>
+            <div className="dailyViewWrapper">
                 <span className="dayNumber">{currentDayFormatted}</span>
                 <div>
                     <Cells 

@@ -1,8 +1,9 @@
 .singleDay {
     border: 1px solid black;
     width: 98%;
-    height: 87.7vh;
+    height: 85vh;
     font-size: 1.3em;
+    text-align: left;
 }
 
 .eventsFilter {
@@ -15,4 +16,8 @@
 
 .singleDayNumber {
     font-size: 1.5em;
+}
+
+.dailyViewWrapper {
+    text-align: left;
 }

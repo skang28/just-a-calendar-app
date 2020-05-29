@@ -7,35 +7,46 @@ class EventForm extends React.Component {
     static defaultProps = {
         title: '',
         event_location: '',
-        start_date_time: '2020-04-15T21:27:36.311Z',
-        end_date_time: '2020-04-16T21:27:36.311Z',
+        start_date_time: '',
+        end_date_time: '',
         description: '',
       };
 
     state = {};
 
+    formatMinutes(minutes) {
+        minutes = minutes + ''
+        if (minutes.length<2) {
+            minutes = '0' + minutes
+        }
+        if (minutes < '30') {
+            minutes = '00'
+        }
+        else {
+            minutes = '30'
+        }
+        return minutes
+    };
+    
     render() {
+        let numDays = moment().daysInMonth();
 
-        let numDays = moment().daysInMonth()
-
-        let dayOption = []
+        let dayOption = [];
         for (let i=1 ; i<numDays+1; i++) {
             dayOption.push(<option value={i} key={"option" +i}>{i}</option>)
-        }
+        };
 
-        let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+        let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
         let monthOption = months.map((month, index) => {
             return <option value={index} key={"option" +index}>{month}</option>
-        })
+        });
 
-        let times = []
+        let times = [];
         for (let i=0; i<23.75; i+=0.5) {
             let hours = Math.floor(i)
             let minutes = (i - hours) * 60 + ''
             let amPm = 'am'
-            if (minutes.length<2) {
-                minutes = '0' + minutes
-            }
+            minutes = this.formatMinutes(minutes)
             if (hours > 11) {
                 hours = hours - 12
                 amPm = 'pm'
@@ -46,7 +57,21 @@ class EventForm extends React.Component {
             times.push(
                 <option value = {`${Math.floor(i)}:${minutes}`} key={"option"+i}>{hours}:{minutes} {amPm}</option>
             )
-        }
+        };
+
+        let startTime = this.props.start_date_time;
+        if (!this.props.start_date_time) {
+            startTime = new Date();
+            startTime.setHours(startTime.getHours() + 1);
+            startTime = startTime.toISOString();
+        };
+
+        let endTime = this.props.end_date_time;
+        if (!this.props.end_date_time) {
+            endTime = new Date();
+            endTime.setHours(endTime.getHours() + 2);
+            endTime = endTime.toISOString();
+        };
 
         return(
             <div className="addEditEvent">
@@ -87,25 +112,25 @@ class EventForm extends React.Component {
                     </div>
                     <div>
                         <label className="startLabel">Start</label>
-                        <select name="startMonth">
+                        <select name="startMonth" defaultValue = {new Date(startTime).getMonth()}>
                             {monthOption}
                         </select>
-                        <select name="startDay">
+                        <select name="startDay" defaultValue = {new Date(startTime).getDate()}>
                             {dayOption}
                         </select>
-                        <select name="startTime">
+                        <select name="startTime" defaultValue = {`${new Date(startTime).getHours()}:${this.formatMinutes(new Date(startTime).getMinutes())}`}>
                             {times}
                         </select>
                     </div>
                     <div>
                         <label className="endLabel">End</label>
-                        <select name="endMonth">
+                        <select name="endMonth" defaultValue = {new Date(endTime).getMonth()}>
                             {monthOption}
                         </select>
-                        <select name="endDay">
+                        <select name="endDay" defaultValue = {new Date(endTime).getDate()}>
                             {dayOption}
                         </select>
-                        <select name="endTime">
+                        <select name="endTime" defaultValue = {`${new Date(endTime).getHours()}:${this.formatMinutes(new Date(endTime).getMinutes())}`}>
                             {times}
                         </select>
                     </div>
