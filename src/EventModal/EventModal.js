@@ -2,6 +2,7 @@ import React from 'react'
 import moment from 'moment'
 import './EventModal.css'
 
+//renders a pop-up window with information on the selected event
 class EventModal extends React.Component {
     static defaultProps = {
         currentEvent : {},

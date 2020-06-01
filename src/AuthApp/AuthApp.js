@@ -6,6 +6,7 @@ import EventForm from '../EventForm/EventForm'
 import EventContext from '../EventContext'
 import config from '../config'
 
+//Authapp class sets up initial API calls and has routes for pages of app
 class AuthApp extends React.Component {
   state = {
     events: [],

@@ -2,6 +2,7 @@ import React from 'react'
 import Events from '../Events/Events'
 import './EventsList.css'
 
+//renders the list of upcoming events on the left side of the calendar
 class EventsList extends React.Component {
     static defaultProps = {
         events: []

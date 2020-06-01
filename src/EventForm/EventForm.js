@@ -2,6 +2,7 @@ import React from 'react'
 import './EventForm.css'
 import moment from 'moment'
 
+//renders form to create a new event or edit an existing event
 class EventForm extends React.Component {
 
     static defaultProps = {

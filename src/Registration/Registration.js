@@ -3,6 +3,7 @@ import config from '../config';
 import {Link} from 'react-router-dom';
 import './Registration.css';
 
+//renders page for creating a new account
 class Registration extends React.Component {
     state = {
         error:''

@@ -3,6 +3,7 @@ import './Events.css'
 import EventContext from '../EventContext'
 import moment from 'moment'
 
+//creates individual event items inside the upcoming events list
 class Events extends React.Component {
     static contextType = EventContext
     static defaultProps = {

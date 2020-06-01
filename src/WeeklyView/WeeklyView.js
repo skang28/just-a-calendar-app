@@ -4,6 +4,7 @@ import DayNames from '../DayNames/DayNames'
 import Cells from '../Cells/Cells'
 import './WeeklyView.css'
 
+//weekly view of calendar
 class WeeklyView extends React.Component {
         
     render() {

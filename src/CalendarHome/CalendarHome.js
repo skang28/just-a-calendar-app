@@ -8,6 +8,7 @@ import NavBar from '../NavBar/NavBar'
 import EventModal from '../EventModal/EventModal'
 import EventContext from '../EventContext'
 
+// renders default page view of app once user is logged in, defaults to monthly view of calendar
 class CalendarHome extends React.Component{
     static contextType = EventContext
     render() {

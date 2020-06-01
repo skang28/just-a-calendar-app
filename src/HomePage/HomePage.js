@@ -1,6 +1,7 @@
 import React from 'react'
 import './HomePage.css'
 
+//landing page for app
 class HomePage extends React.Component {
     render() {
         return(

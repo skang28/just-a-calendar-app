@@ -2,6 +2,7 @@ import React from 'react'
 import './NavBar.css'
 import {Link} from 'react-router-dom'
 
+//renderse navigation bar for app
 class NavBar extends React.Component {
     render() {
         return(

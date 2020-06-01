@@ -6,6 +6,7 @@ import Registration from '../Registration/Registration'
 import AuthApp from '../AuthApp/AuthApp'
 import HomePage from '../HomePage/HomePage'
 
+// App class houses routes for main App, landing page, and account creation/login pages
 class App extends React.Component {
   
   render () {

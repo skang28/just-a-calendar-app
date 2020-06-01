@@ -3,6 +3,7 @@ import config from '../config'
 import {Link} from 'react-router-dom'
 import './LoginPage.css'
 
+//page for user to log into account
 class LoginPage extends React.Component {
     state = {
         error: ''

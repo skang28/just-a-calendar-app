@@ -4,6 +4,7 @@ import DayNames from '../DayNames/DayNames'
 import './MonthlyView.css'
 import Cells from '../Cells/Cells'
 
+//renders monthly view of the calendar
 class MonthlyView extends React.Component {
 
     render() {

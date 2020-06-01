@@ -2,6 +2,7 @@ import React from 'react'
 import EventContext from '../EventContext'
 import './Cells.css'
 
+//creates the individual cells of the calendar, also inserts events into the calendar
 class Cells extends React.Component {
 
     static contextType = EventContext

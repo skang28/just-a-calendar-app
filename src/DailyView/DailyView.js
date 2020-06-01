@@ -3,6 +3,7 @@ import moment from 'moment';
 import './DailyView.css';
 import Cells from '../Cells/Cells';
 
+// renders only what today is and any events occuring on that day
 class DailyView extends React.Component {
     render() {
         let currentDay = moment().date();
