@@ -34,3 +34,40 @@
     background-color: white;
 }
 
+@media only screen and (max-width: 1055px) {
+    .eventModal {
+        height: 40vh;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .eventModal {
+        font-size: 0.9em;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .eventModal {
+        width: 60vw;
+        font-size: 0.8em;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .eventModal {
+        font-size: 0.7em;
+        height: 35vh;
+    }
+}
+
+@media only screen and (max-width: 365px) {
+    .eventModal {
+        font-size: 0.65em;
+    }
+}
+
+@media only screen and (max-width: 321px) {
+    .eventModal {
+        font-size: 0.6em;
+    }
+}

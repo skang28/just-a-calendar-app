@@ -17,9 +17,21 @@
     vertical-align: top;
     border: 1px solid black;
     width: calc(.14 * 80vw);
-    height: calc(.14 * 100vh);
+    height: calc(.14 * 121vh);
     color: black;
     font-weight: 500;
     font-family: 'Nunito Sans', sans-serif;
     overflow-y: auto;
+}
+
+@media only screen and (max-width: 550px) {
+    .nameofDays {
+        font-size: 0.8em;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .nameofDays {
+        font-size: 0.6em;
+    }
 }

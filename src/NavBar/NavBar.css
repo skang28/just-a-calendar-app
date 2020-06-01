@@ -45,7 +45,6 @@
 
 .navLinks {
     cursor: pointer;
-    margin: 1em 2em 0 0;
     font-weight: 500;
 }
 
@@ -67,4 +66,101 @@ a {
 
 .logoutLink {
     color: #C90E0E;
+    margin-right: 2em;
+}
+
+@media only screen and (max-width: 1055px) {
+    .selectBox {
+        font-size: 0.8em;
+    }
+
+    .viewSelect::after {
+        top: 24px;
+        left: 92px;
+    }
+
+    .title {
+        margin: 0.2em 0 0 0;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .selectBox {
+        font-size: 0.7em;
+    }
+
+    .viewSelect::after {
+        padding: 0 0.5em;
+        top: 20px;
+        left: 90px;
+    }
+
+    .logoutLink {
+        font-size: 0.9em;
+        padding-top: 0.2em;
+    }
+}
+
+@media only screen and (max-width: 456px) {
+    .selectBox {
+        font-size: 0.6em;
+        margin-top: 1.2em;
+    }
+
+    .viewSelect::after {
+        padding: 0;
+        top: 17px;
+        left: 83px;
+    }
+}
+
+@media only screen and (max-width: 433px) {
+    .title {
+        font-size: 1.7em;
+        margin-top: 0.4em;
+    }
+}
+
+@media only screen and (max-width: 433px) {
+    .title {
+        font-size: 1.5em;
+        margin-top: 0.4em;
+        margin-left: 0.3em;
+    }
+
+    .selectBox {
+        font-size: 0.5em;
+        margin-top: 1.4em;
+    }
+
+    .viewSelect::after {
+        padding: 0;
+        top: 17px;
+        left: 70px;
+        font-size: 0.8em;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .title {
+        font-size: 1.4em;
+    }
+
+    .selectBox {
+        font-size: 0.45em;
+        margin-top: 1.5em;
+    }
+
+    .viewSelect::after {
+        padding: 0;
+        top: 16px;
+        left: 63px;
+        font-size: 0.7em;
+    }
+
+    .logoutLink {
+        font-size: 0.7em;
+        padding: 0;
+        margin-top: 1.4em;
+    }
 }

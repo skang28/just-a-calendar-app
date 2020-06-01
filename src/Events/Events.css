@@ -1,25 +1,18 @@
-.event {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 2em;
-}
-
 .event span {
     font-weight: bold;
 }
 
-.listItem {
+.event {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
     font-size: 1em;
     font-weight: 300;
     font-family: 'Nunito Sans', sans-serif;
-    text-align: left;
-    padding: 0 0.5em 0 0.5em;
-    margin-bottom: 0.3em;
+    text-align: center;
+    padding: 0.3em 0 0.3em 0;
+    margin-bottom: 2em;
     border: none;
-    border-radius: 0.4em;
+    border-radius: 6px;
     background-color: #2B4D80;
     color: #E9F1F7;
     opacity: 0.9;
@@ -40,4 +33,45 @@
 
 .eventTimes {
     font-size: 0.9em;
+}
+
+.eventTimes p {
+     margin: 0;
+}
+
+@media only screen and (max-width: 1055px) {
+    .event {
+        font-size: 0.8em;
+    }
+    
+}
+
+@media only screen and (max-width: 550px) {
+    .event {
+        font-size: 0.75em;
+    }
+}
+
+@media only screen and (max-width: 456px) {
+    .event {
+        font-size: 0.65em;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .event {
+        font-size: 0.5em;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .event {
+        font-size: 0.4em;
+    }
+}
+
+@media only screen and (max-width: 321px) {
+    .event {
+        font-size: 0.3em;
+    }
 }

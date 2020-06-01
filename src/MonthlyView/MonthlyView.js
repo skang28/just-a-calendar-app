@@ -16,20 +16,38 @@ class MonthlyView extends React.Component {
         for (let i = 0; i < firstDay; i++) {
             let momentObject = moment().startOf("month").startOf("week").add(i,"days")
             allDays.push(
-                <Cells className = "emptyDay" content = {momentObject.date()} contentISOString = {momentObject.toISOString() }  key={momentObject.toISOString()} />
+                <Cells 
+                    className = "emptyDay"
+                    className2 = "monthDayNumber" 
+                    content = {momentObject.date()} 
+                    contentISOString = {momentObject.toISOString() }  
+                    key={momentObject.toISOString()} 
+                />
             )
         }
 
         for (let d = 0; d < daysInMonth; d++) {
             allDays.push(
-                <Cells className = "calendarDay" content = {d+1} contentISOString = {moment().startOf("month").add(d,"days").toISOString()}  key={moment().startOf("month").add(d,"days").toISOString()} />
+                <Cells 
+                    className = "calendarDay" 
+                    className2 = "monthDayNumber"
+                    content = {d+1} 
+                    contentISOString = {moment().startOf("month").add(d,"days").toISOString()}  
+                    key={moment().startOf("month").add(d,"days").toISOString()} 
+                />
             )
         }
 
         for (let i = 0; i < 6 - lastDay; i++) {
             let momentObject = moment().endOf("month").add(i + 1, "days")
             allDays.push(
-                <Cells className = "emptyDay" content = {momentObject.date()} contentISOString = {momentObject.toISOString()}  key={momentObject.toISOString()} />
+                <Cells 
+                    className = "emptyDay" 
+                    className2 = "monthDayNumber"
+                    content = {momentObject.date()} 
+                    contentISOString = {momentObject.toISOString()}  
+                    key={momentObject.toISOString()} 
+                />
             )
         }
 

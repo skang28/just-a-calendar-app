@@ -19,14 +19,6 @@ button {
   opacity: .2;
 }
 
-img {
-  position: fixed;
-  z-index: 0;
-  width: auto;
-  height: 100;
-  opacity: .2;
-}
-
 .appContent {
   position: relative;
   z-index: 1;

@@ -40,3 +40,92 @@
     font-weight: 500;
     font-family: 'Nunito', sans-serif;
 }
+
+@media only screen and (max-width: 1055px) {
+    .addEventButton {
+        font-size: 0.7em;
+    }
+
+    .eventsList {
+        padding: 0 0 0 0;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .listTitle {
+        font-size: 1.3em;
+    }
+    .eventsWrapper {
+        padding: 0;
+    }
+    .eventsList {
+        padding: 0 0.1em 0 0.4em;
+    }
+}
+
+@media only screen and (max-width: 725px) {
+    .eventsList {
+        padding: 0 0.1em 0 0.4em;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .listTitle {
+        font-size: 1.1em;
+    }
+}
+
+@media only screen and (max-width: 456px) {
+    .addEventButton {
+        font-size: 0.6em;
+    }
+
+    .addEventButton {
+        margin-top: 0.8em;
+    }
+}
+
+@media only screen and (max-width: 433px) {
+    .listTitle {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .listTitle {
+        font-size: 0.9em;
+    }
+
+    .addEventButton {
+        font-size: 0.5em;
+    }
+}
+
+@media only screen and (max-width: 365px) {
+    .listTitle {
+        font-size: 0.7em;
+    }
+
+    .addEventButton {
+        font-size: 0.4em;
+    }
+
+    .eventsList {
+        margin-top: 0.5em;
+    }
+}
+
+@media only screen and (max-width: 321px) {
+    .listTitle {
+        font-size: 0.6em;
+    }
+
+    .addEventButton {
+        font-size: 0.35em;
+    }
+
+    .eventsList {
+        margin-top: 0.5em;
+        padding: 0;
+    }
+}

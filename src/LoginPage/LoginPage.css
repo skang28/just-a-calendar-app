@@ -55,3 +55,13 @@
     border-color: #2B4D80;
     background-color: white;
 }
+
+@media only screen and (max-width: 321px) {
+    .loginForm {
+        font-size: 0.9em;
+    }
+
+    .passwordLabel {
+        margin-right: 42px;
+    }
+}

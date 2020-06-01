@@ -14,3 +14,39 @@
 .cellEvent:hover {
     cursor: pointer;
 }
+
+.eventsFilter {
+    font-size: 1em;
+}
+
+@media only screen and (max-width: 1055px) {
+    .eventsFilter {
+        font-size: 0.8em;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .eventsFilter {
+        font-size: 0.7em;
+    }
+    
+    .monthDayNumber {
+        font-size: 0.9em;
+    }
+}
+
+@media only screen and (max-width: 456px) {
+    .eventsFilter {
+        font-size: 0.55em;
+    }
+}
+
+@media only screen and (max-width: 365px) {
+    .eventsFilter {
+        font-size: 0.4em;
+    }
+
+    .monthDayNumber {
+        font-size: 0.7em;
+    }
+}

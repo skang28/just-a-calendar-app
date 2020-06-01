@@ -102,6 +102,7 @@ class EventForm extends React.Component {
                             });
                 }}>
                     {this.state.error?this.state.error:''}
+                    
                     <div>
                         <label className="titleLabel">Title</label>
                         <input type="text" name="eventTitle" defaultValue = {this.props.title} required></input>
@@ -112,25 +113,25 @@ class EventForm extends React.Component {
                     </div>
                     <div>
                         <label className="startLabel">Start</label>
-                        <select name="startMonth" defaultValue = {new Date(startTime).getMonth()}>
+                        <select className="formSelect" name="startMonth" defaultValue = {new Date(startTime).getMonth()}>
                             {monthOption}
                         </select>
-                        <select name="startDay" defaultValue = {new Date(startTime).getDate()}>
+                        <select className="formSelect" name="startDay" defaultValue = {new Date(startTime).getDate()}>
                             {dayOption}
                         </select>
-                        <select name="startTime" defaultValue = {`${new Date(startTime).getHours()}:${this.formatMinutes(new Date(startTime).getMinutes())}`}>
+                        <select className="formSelect" name="startTime" defaultValue = {`${new Date(startTime).getHours()}:${this.formatMinutes(new Date(startTime).getMinutes())}`}>
                             {times}
                         </select>
                     </div>
                     <div>
                         <label className="endLabel">End</label>
-                        <select name="endMonth" defaultValue = {new Date(endTime).getMonth()}>
+                        <select className="formSelect" name="endMonth" defaultValue = {new Date(endTime).getMonth()}>
                             {monthOption}
                         </select>
-                        <select name="endDay" defaultValue = {new Date(endTime).getDate()}>
+                        <select className="formSelect" name="endDay" defaultValue = {new Date(endTime).getDate()}>
                             {dayOption}
                         </select>
-                        <select name="endTime" defaultValue = {`${new Date(endTime).getHours()}:${this.formatMinutes(new Date(endTime).getMinutes())}`}>
+                        <select className="formSelect" name="endTime" defaultValue = {`${new Date(endTime).getHours()}:${this.formatMinutes(new Date(endTime).getMinutes())}`}>
                             {times}
                         </select>
                     </div>
